@@ -1,16 +1,13 @@
 import React from 'react'
 import Styles from './home-styles.scss'
-import LOGO from '@/presentation/assets/img/logo.svg'
 import CLOSE_ICON from '@/presentation/assets/icons/close.svg'
 import GITHUB_ICON from '@/presentation/assets/icons/github.svg'
+import { Header } from '@/presentation/components'
 
 const Home: React.FC = () => {
   return (
     <div className={Styles.home}>
-      <header className={Styles.header}>
-        <img width='114px' src={LOGO} />
-        <h1>Desafio - React</h1>
-      </header>
+      <Header />
       <section className={Styles.section}>
         <button>Open Dialog</button>
       </section>

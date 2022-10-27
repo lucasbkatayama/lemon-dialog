@@ -1,0 +1,14 @@
+@import '@/presentation/styles/colors.scss';
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 96px;
+  background-color: $white;
+  padding: 0 15%;
+
+  h1 {
+    text-align: center;
+    margin: auto;
+  }
+}
