@@ -10,7 +10,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.scss'],
+    extensions: ['.ts', '.tsx', '.js', '.scss', '.svg'],
     alias: {
       '@': path.join(__dirname, 'src')
     }
@@ -39,6 +39,21 @@ module.exports = {
       }, {
         loader: 'sass-loader'
       }]
+    }, {
+      test: /\.(js|jsx)$/,
+      exclude: /node_modules/,
+      use: ['babel-loader']
+    },
+    {
+      test: /\.svg$/,
+      use: [
+        {
+          loader: 'svg-url-loader',
+          options: {
+            limit: 10000
+          }
+        }
+      ]
     }
     ]
   },
