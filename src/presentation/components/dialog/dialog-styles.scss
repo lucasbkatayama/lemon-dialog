@@ -1,0 +1,27 @@
+@import '@/presentation/styles/colors.scss';
+
+.dialog {
+  height: 100vh;
+  width: 100vw;
+  padding-top: 82px;
+  position: absolute;
+  background-color: $overlay;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+
+  div {
+    background-color: $white;
+    padding: 32px;
+    width: 100%;
+    max-height: -webkit-fill-available;
+    overflow-y: scroll;
+    position: relative;
+
+    img {
+      position: absolute;
+      top: 32px;
+      right: 32px;
+    }
+  }
+}
