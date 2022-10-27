@@ -1,26 +1,5 @@
 @import '@/presentation/styles/colors.scss';
 
-* {
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-button {
-  height: 56px;
-  padding: 16px;
-  background-color: $white;
-  outline: none;
-  border: none;
-  font-weight: bold;
-
-  &:hover {
-    background-color: $grey;
-  }
-}
-
 .home {
   display: flex;
   flex-direction: column;
@@ -31,25 +10,6 @@ button {
   .section {
     display: flex;
     justify-content: center;
-  }
-
-  .footer {
-    background-color: $black;
-    display: flex;
-    height: 80px;
-    align-items: center;
-    justify-content: center;
-
-    
-    img {
-      margin-right: 8px;
-    }
-
-    a {
-      color: $white;
-      display: flex;
-      align-items: center;
-    }
   }
 
   .overlay {
