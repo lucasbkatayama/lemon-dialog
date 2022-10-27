@@ -1,8 +1,7 @@
 import React from 'react'
 import Styles from './home-styles.scss'
 import CLOSE_ICON from '@/presentation/assets/icons/close.svg'
-import GITHUB_ICON from '@/presentation/assets/icons/github.svg'
-import { Header } from '@/presentation/components'
+import { Footer, Header } from '@/presentation/components'
 
 const Home: React.FC = () => {
   return (
@@ -11,12 +10,7 @@ const Home: React.FC = () => {
       <section className={Styles.section}>
         <button>Open Dialog</button>
       </section>
-      <footer className={Styles.footer}>
-        <a href="http://www.google.com">
-          <img src={GITHUB_ICON} />
-          Link do projeto
-        </a>
-      </footer>
+      <Footer />
       {false && (
         <div className={Styles.overlay}>
           <div>

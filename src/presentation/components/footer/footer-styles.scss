@@ -1,0 +1,20 @@
+@import '@/presentation/styles/colors.scss';
+
+.footer {
+  background-color: $black;
+  display: flex;
+  height: 80px;
+  align-items: center;
+  justify-content: center;
+
+  
+  img {
+    margin-right: 8px;
+  }
+
+  a {
+    color: $white;
+    display: flex;
+    align-items: center;
+  }
+}
