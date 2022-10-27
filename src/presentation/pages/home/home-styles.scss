@@ -1,8 +1,4 @@
-$white: #fff;
-$black: rgb(6, 13, 10);
-$grey: #ccc;
-$primary: rgb(0, 128, 89);
-$overlay: rgba(0, 0, 0, 0.8);
+@import '@/presentation/styles/colors.scss';
 
 * {
   font-family: 'Inter', sans-serif;
@@ -31,19 +27,6 @@ button {
   justify-content: space-between;
   background-color: $primary;
   height: 100vh;
-
-  .header {
-    display: flex;
-    align-items: center;
-    height: 96px;
-    background-color: $white;
-    padding: 0 15%;
-
-    h1 {
-      text-align: center;
-      margin: auto;
-    }
-  }
 
   .section {
     display: flex;
