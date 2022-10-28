@@ -5,7 +5,7 @@ import GITHUB_ICON from '@/presentation/assets/icons/github.svg'
 const Footer: React.FC = () => {
   return (
     <footer className={Styles.footer}>
-      <a href="http://www.google.com">
+      <a target='blank' href="https://github.com/lucasbkatayama/lemon-dialog">
         <img src={GITHUB_ICON} />
         Link do projeto
       </a>
