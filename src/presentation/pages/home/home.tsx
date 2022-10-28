@@ -18,13 +18,33 @@ const Home: React.FC = () => {
       </section>
       <Footer />
       <Dialog
-        title='Title'
+        title='Sobre'
         isOpen={isOpen}
         closeOnOverlayClick={true}
         onClose={() => setIsOpen(false)}
       >
         <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit Lorem ipsum dolor sit amet,
+          Nosso propósito é dar poder às pessoas e acelerar a transição para a energia sustentável <br />
+          <br />
+          Você não é apenas um pagador de contas. Chega de pagar caro na conta de luz e não saber o porquê, ou de receber sua conta em papel todo mês e não entender nada do que está escrito. <br />
+          <br />
+          Acreditamos que o futuro é feito de decisões que tomamos agora e decidimos transformar a experiência com energia no Brasil. <br />
+          <br />
+          Somos incansáveis na busca das melhores soluções, por isso chega de consumir uma energia que faz mal para o nosso planeta. <br />
+          <br />
+          Com a Lemon, você sempre – e é sempre mesmo – vai ter uma energia mais barata, mais sustentável e mais digital pro seu negócio. <br />
+          <br />
+          <br />
+          <b>Três princípios que guiam a Lemon</b><br />
+          <br />
+          - Economia Energia é essencial. E não precisa ser cara. Responsável por fazer funcionar tantos negócios no Brasil, eletricidade também pode ser limpa! Gerar economia é ajudar a realizar sonhos.
+          <br />
+          <br />
+          - Sustentabilidade A produção de energia no mundo é uma das fontes mais poluentes ao meio ambiente. Energia pode ser sustentável e precisa ser acessível! É pra isso que trabalhamos.
+          <br />
+          <br />
+          - Tecnologia Tecnologia é ferramenta. Nossa grande aliada para transformar o mercado de energia e trazer mais simplicidade e poder para as pessoas e seus negócios.
+          <br />
         </p>
       </Dialog>
     </div>
