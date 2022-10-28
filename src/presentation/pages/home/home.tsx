@@ -9,7 +9,7 @@ const Home: React.FC = () => {
     <div className={Styles.home}>
       <Header />
       <section className={Styles.section}>
-        <button>Open Dialog</button>
+        <button data-testid='dialog-button'>Open Dialog</button>
       </section>
       <Footer />
       <Dialog

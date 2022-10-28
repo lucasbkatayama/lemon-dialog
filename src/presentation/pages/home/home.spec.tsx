@@ -1,11 +1,22 @@
 import React from 'react'
-import { render } from '@testing-library/react'
+import { render, fireEvent, RenderResult } from '@testing-library/react'
 import Home from './home'
+
+type SutTypes = {
+  sut: RenderResult
+}
+
+const makeSut = (): SutTypes => {
+  const sut = render(<Home />)
+  return {
+    sut
+  }
+}
 
 describe('Dialog Component', () => {
   test('Should not render Dialog on start', () => {
-    const { getByTestId } = render(<Home />)
-    const homeWrap = getByTestId('dialog-wrap')
-    expect(homeWrap.childElementCount).toBe(0)
+    const { sut } = makeSut()
+    const dialogWrap = sut.getByTestId('dialog-wrap')
+    expect(dialogWrap.childElementCount).toBe(0)
   })
 })
