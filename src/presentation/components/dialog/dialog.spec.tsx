@@ -20,4 +20,17 @@ describe('Dialog Component', () => {
     const dialogWrap = sut.queryByTestId('dialog-wrap')
     expect(dialogWrap).toBeNull()
   })
+
+  test('Should render if is open is true', () => {
+    const { sut } = makeSut(true)
+    const dialogWrap = sut.queryByTestId('dialog-wrap')
+    expect(dialogWrap).toBeTruthy()
+  })
+
+  test('Should render title prop', () => {
+    const title = faker.random.word()
+    const { sut } = makeSut(true, null, null, title)
+    const dialogTitle = sut.getByTestId('dialog-title')
+    expect(dialogTitle.textContent).toBe(title)
+  })
 })

@@ -26,7 +26,7 @@ const Dialog: React.FC<Props> = (props: Props) => {
           <div className={Styles.background} onClick={() => closeOnOverlayClick && onClose()} />
           <div className={Styles['inner-container']}>
             <div className={Styles['title-container']}>
-              <span>{title}</span>
+              <span data-testid='dialog-title'>{title}</span>
               <img src={CLOSE_ICON} onClick={onClose} />
             </div>
             {children}
