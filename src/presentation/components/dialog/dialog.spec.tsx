@@ -1,5 +1,5 @@
 import React from 'react'
-import { render, RenderResult } from '@testing-library/react'
+import { fireEvent, render, RenderResult } from '@testing-library/react'
 import faker from 'faker'
 import Dialog from './dialog'
 
@@ -32,5 +32,13 @@ describe('Dialog Component', () => {
     const { sut } = makeSut(true, null, null, title)
     const dialogTitle = sut.getByTestId('dialog-title')
     expect(dialogTitle.textContent).toBe(title)
+  })
+
+  test('Should disable onClose when click on overlay if closeOnOverlayClick is false', () => {
+    const stub = jest.fn()
+    const { sut } = makeSut(true, false, stub)
+    const dialogOverlay = sut.getByTestId('dialog-overlay')
+    fireEvent.click(dialogOverlay)
+    expect(stub).not.toBeCalled()
   })
 })

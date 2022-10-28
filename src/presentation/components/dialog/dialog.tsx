@@ -23,7 +23,7 @@ const Dialog: React.FC<Props> = (props: Props) => {
     <>
       {isOpen && (
         <div data-testid='dialog-wrap' className={Styles.dialog}>
-          <div className={Styles.background} onClick={() => closeOnOverlayClick && onClose()} />
+          <div data-testid='dialog-overlay' className={Styles.background} onClick={() => closeOnOverlayClick && onClose()} />
           <div className={Styles['inner-container']}>
             <div className={Styles['title-container']}>
               <span data-testid='dialog-title'>{title}</span>
