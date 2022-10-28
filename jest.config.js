@@ -3,12 +3,13 @@ module.exports = {
   collectCoverageFrom: [
     '<rootDir>/src/**/*.{ts,tsx}',
     '!**/*.d.ts',
-    '!**/*.svg',
+    '!**/*.svg'
   ],
   coverageDirectory: 'coverage',
   testEnvironment: 'jsdom',
   transform: {
-    '.+\\.(ts|tsx)$': 'ts-jest'
+    '.+\\.(ts|tsx)$': 'ts-jest',
+    '^.+\\.svg$': '<rootDir>/svgTransform.js'
   },
   moduleNameMapper: {
     '@/(.*)': '<rootDir>/src/$1',
