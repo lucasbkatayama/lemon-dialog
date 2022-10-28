@@ -27,7 +27,7 @@ const Dialog: React.FC<Props> = (props: Props) => {
           <div className={Styles['inner-container']}>
             <div className={Styles['title-container']}>
               <span data-testid='dialog-title'>{title}</span>
-              <img src={CLOSE_ICON} onClick={onClose} />
+              <img data-testid='dialog-close-button' src={CLOSE_ICON} onClick={onClose} />
             </div>
             {children}
           </div>
