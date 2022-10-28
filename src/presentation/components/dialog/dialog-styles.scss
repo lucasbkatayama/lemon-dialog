@@ -10,18 +10,26 @@
   align-items: flex-end;
   overflow: hidden;
 
-  div {
+  .inner-container {
     background-color: $white;
     padding: 32px;
     width: 100%;
     max-height: -webkit-fill-available;
     overflow-y: scroll;
-    position: relative;
+  }
 
-    img {
-      position: absolute;
-      top: 32px;
-      right: 32px;
+  .title-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 42px;
+
+    span {
+      font-weight: 500;
+      font-size: 22px;
+      letter-spacing: -0.032em;
+      color: $black
     }
   }
 }
