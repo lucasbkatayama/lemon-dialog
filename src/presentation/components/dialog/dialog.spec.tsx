@@ -5,12 +5,15 @@ import Dialog from './dialog'
 
 type SutTypes = {
   sut: RenderResult
+  onCloseSpy: jest.Mock<any, any>
 }
 
-const makeSut = (isOpen: boolean = faker.datatype.boolean(), closeOnOverlayClick: boolean = faker.datatype.boolean(), onClose: () => void = () => {}, title: string = faker.random.word()): SutTypes => {
-  const sut = render(<Dialog isOpen={isOpen} closeOnOverlayClick={closeOnOverlayClick} onClose={onClose} title={title} />)
+const makeSut = (isOpen: boolean = faker.datatype.boolean(), closeOnOverlayClick: boolean = faker.datatype.boolean(), title: string = faker.random.word()): SutTypes => {
+  const onCloseSpy = jest.fn()
+  const sut = render(<Dialog isOpen={isOpen} closeOnOverlayClick={closeOnOverlayClick} onClose={onCloseSpy} title={title} />)
   return {
-    sut
+    sut,
+    onCloseSpy
   }
 }
 
@@ -29,32 +32,29 @@ describe('Dialog Component', () => {
 
   test('Should render title prop', () => {
     const title = faker.random.word()
-    const { sut } = makeSut(true, null, null, title)
+    const { sut } = makeSut(true, null, title)
     const dialogTitle = sut.getByTestId('dialog-title')
     expect(dialogTitle.textContent).toBe(title)
   })
 
   test('Should disable onClose when click on overlay if closeOnOverlayClick is false', () => {
-    const stub = jest.fn()
-    const { sut } = makeSut(true, false, stub)
+    const { sut, onCloseSpy } = makeSut(true, false)
     const overlay = sut.getByTestId('dialog-overlay')
     fireEvent.click(overlay)
-    expect(stub).not.toBeCalled()
+    expect(onCloseSpy).not.toBeCalled()
   })
 
   test('Should enable onClose when click on overlay if closeOnOverlayClick is true', () => {
-    const stub = jest.fn()
-    const { sut } = makeSut(true, true, stub)
+    const { sut, onCloseSpy } = makeSut(true, true)
     const overlay = sut.getByTestId('dialog-overlay')
     fireEvent.click(overlay)
-    expect(stub).toBeCalled()
+    expect(onCloseSpy).toBeCalled()
   })
 
   test('Should call onClose when click on close button', () => {
-    const stub = jest.fn()
-    const { sut } = makeSut(true, null, stub)
+    const { sut, onCloseSpy } = makeSut(true, null)
     const button = sut.getByTestId('dialog-close-button')
     fireEvent.click(button)
-    expect(stub).toBeCalled()
+    expect(onCloseSpy).toBeCalled()
   })
 })
