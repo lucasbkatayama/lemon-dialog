@@ -1,3 +1,5 @@
+[![Build Status](https://app.travis-ci.com/lucasbkatayama/lemon-dialog.svg?branch=master)](https://app.travis-ci.com/lucasbkatayama/lemon-dialog)
+
 # Lemon Dialog
 
 Lemon Dialog é um projeto em React. 
