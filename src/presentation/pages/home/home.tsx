@@ -23,7 +23,7 @@ const Home: React.FC = () => {
         closeOnOverlayClick={true}
         onClose={() => setIsOpen(false)}
       >
-        <p>
+        <p data-testid='children'>
           Nosso propósito é dar poder às pessoas e acelerar a transição para a energia sustentável <br />
           <br />
           Você não é apenas um pagador de contas. Chega de pagar caro na conta de luz e não saber o porquê, ou de receber sua conta em papel todo mês e não entender nada do que está escrito. <br />
