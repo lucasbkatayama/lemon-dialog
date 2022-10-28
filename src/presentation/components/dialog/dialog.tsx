@@ -2,14 +2,12 @@ import React from 'react'
 import Styles from './dialog-styles.scss'
 import CLOSE_ICON from '@/presentation/assets/icons/close.svg'
 
-type CloseType = () => void
-
 type Props = {
   title?: string
   isOpen: boolean
   closeOnOverlayClick: boolean
   children?: React.ReactNode
-  onClose: CloseType
+  onClose: () => void
 }
 
 const Dialog: React.FC<Props> = (props: Props) => {
