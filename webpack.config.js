@@ -1,5 +1,6 @@
 const path = require('path')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   mode: 'development',
@@ -58,6 +59,9 @@ module.exports = {
     ]
   },
   devServer: {
+    headers: {
+      'Cache-Control': 'no-store'
+    },
     static: {
       directory: path.join(__dirname, './public')
     },
@@ -66,11 +70,8 @@ module.exports = {
       writeToDisk: true
     }
   },
-  externals: {
-    react: 'React',
-    'react-dom': 'ReactDOM'
-  },
   plugins: [
-    new CleanWebpackPlugin()
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({ template: 'public/index.html' })
   ]
 }
