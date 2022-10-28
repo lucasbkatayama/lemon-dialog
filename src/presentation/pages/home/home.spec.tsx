@@ -30,11 +30,11 @@ describe('Dialog Component', () => {
     expect(dialogWrap).toBeTruthy()
   })
 
-  test('Should render children inside dialog', () => {
+  test('Should render About inside Dialog', () => {
     const { sut } = makeSut()
     const button = sut.getByTestId('dialog-button') as HTMLButtonElement
     fireEvent.click(button)
-    const dialogWrap = sut.getByTestId('children')
+    const dialogWrap = sut.getByTestId('about')
     expect(dialogWrap).toBeTruthy()
   })
 })

@@ -1,8 +1,9 @@
 import React, { memo } from 'react'
+import Styles from './about-styles.scss'
 
 const About: React.FC = () => {
   return (
-    <p data-testid='children'>
+    <p data-testid='about' className={Styles.about}>
       Nosso propósito é dar poder às pessoas e acelerar a transição para a energia sustentável <br />
       <br />
       Você não é apenas um pagador de contas. Chega de pagar caro na conta de luz e não saber o porquê, ou de receber sua conta em papel todo mês e não entender nada do que está escrito. <br />
