@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import Styles from './header-styles.scss'
 import LOGO from '@/presentation/assets/img/logo.svg'
 
@@ -11,4 +11,4 @@ const Header: React.FC = () => {
   )
 }
 
-export default Header
+export default memo(Header)

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import Styles from './footer-styles.scss'
 import GITHUB_ICON from '@/presentation/assets/icons/github.svg'
 
@@ -13,4 +13,4 @@ const Footer: React.FC = () => {
   )
 }
 
-export default Footer
+export default memo(Footer)
