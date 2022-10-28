@@ -41,4 +41,12 @@ describe('Dialog Component', () => {
     fireEvent.click(dialogOverlay)
     expect(stub).not.toBeCalled()
   })
+
+  test('Should enable onClose when click on overlay if closeOnOverlayClick is true', () => {
+    const stub = jest.fn()
+    const { sut } = makeSut(true, true, stub)
+    const dialogOverlay = sut.getByTestId('dialog-overlay')
+    fireEvent.click(dialogOverlay)
+    expect(stub).toBeCalled()
+  })
 })
