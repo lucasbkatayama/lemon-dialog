@@ -24,11 +24,12 @@ const Dialog: React.FC<Props> = (props: Props) => {
   return (
     <>
       {isOpen && (
-        <div data-testid='dialog-wrap' className={Styles.dialog} onClick={() => closeOnOverlayClick && onClose()}>
+        <div data-testid='dialog-wrap' className={Styles.dialog}>
+          <div className={Styles.background} onClick={() => closeOnOverlayClick && onClose()} />
           <div className={Styles['inner-container']}>
             <div className={Styles['title-container']}>
               <span>{title}</span>
-              <img src={CLOSE_ICON} />
+              <img src={CLOSE_ICON} onClick={onClose} />
             </div>
             {children}
           </div>
