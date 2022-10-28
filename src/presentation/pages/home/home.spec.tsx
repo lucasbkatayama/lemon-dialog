@@ -18,15 +18,15 @@ describe('Dialog Component', () => {
 
   test('Should not render Dialog on start', () => {
     const { sut } = makeSut()
-    const dialogWrap = sut.getByTestId('dialog-wrap')
-    expect(dialogWrap.childElementCount).toBe(0)
+    const dialogWrap = sut.queryByTestId('dialog-wrap')
+    expect(dialogWrap).toBeFalsy()
   })
 
   test('Should render Dialog on click button', () => {
     const { sut } = makeSut()
-    const dialogWrap = sut.getByTestId('dialog-wrap')
     const button = sut.getByTestId('dialog-button') as HTMLButtonElement
     fireEvent.click(button)
-    expect(dialogWrap.childElementCount).toBe(1)
+    const dialogWrap = sut.queryByTestId('dialog-wrap')
+    expect(dialogWrap).toBeTruthy()
   })
 })
